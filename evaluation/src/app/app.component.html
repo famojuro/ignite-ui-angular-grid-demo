@@ -1,0 +1,17 @@
+<div class="container container-fluid">
+
+  <app-navbar (menuIndexIndexEmitter)="updateMenuIndex($event)"></app-navbar>
+
+  <ng-container [ngSwitch]="selectedMenuIndex">
+
+    <app-infragistics-paging *ngSwitchCase="0"></app-infragistics-paging>
+
+    <app-infragistics-sorting *ngSwitchCase="1"></app-infragistics-sorting>
+
+    <app-infragistics-filtering *ngSwitchCase="2"></app-infragistics-filtering>
+
+    <app-infragistics-editing *ngSwitchCase="3"></app-infragistics-editing>
+
+  </ng-container>
+
+</div>
